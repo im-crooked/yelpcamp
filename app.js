@@ -15,9 +15,9 @@ var express         = require("express"),
 
 //connecting database
 
-//mongoose.connect("mongodb://localhost/yelp_camp");
+mongoose.connect(process.env.DATABASEURL,{useNewUrlParser: true,useUnifiedTopology: true});
 
-mongoose.connect("mongodb+srv://im_crooked:Ms7842477962%23@yelpcamp-keeyp.mongodb.net/test?retryWrites=true&w=majority", {useNewUrlParser: true,useUnifiedTopology: true});
+//mongoose.connect("mongodb+srv://im_crooked:Ms7842477962%23@yelpcamp-keeyp.mongodb.net/test?retryWrites=true&w=majority", {useNewUrlParser: true,useUnifiedTopology: true});
 
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);
